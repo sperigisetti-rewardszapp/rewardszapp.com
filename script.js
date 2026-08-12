@@ -1,15 +1,20 @@
-function submitForm(e){
-  e.preventDefault();
-  const form=e.target, status=document.getElementById("form-status");
-  const data=new FormData(form);
-  const subject=encodeURIComponent("RewardsZapp Website Enquiry - "+(data.get("company")||data.get("name")));
-  const body=encodeURIComponent(
-    "Name: "+data.get("name")+"\n"+
-    "Email: "+data.get("email")+"\n"+
-    "Company: "+data.get("company")+"\n"+
-    "Requirement: "+data.get("requirement")+"\n\n"+
-    data.get("message")
-  );
-  window.location.href="mailto:info@rewardszapp.com?subject="+subject+"&body="+body;
-  status.textContent="Opening your email app to send the enquiry…";
-}
+const menuButton = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+menuButton.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});

@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RewardsZapp - Smart Rewards, Loyalty & Engagement Solutions" />
+  <title>RewardsZapp | Rewards & Loyalty Platform</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #07152f;
+      --navy-2: #0c2148;
+      --blue: #246bfe;
+      --purple: #7547ff;
+      --gold: #ffbd4a;
+      --gold-light: #ffe29a;
+      --white: #ffffff;
+      --muted: #aab8d3;
+      --light: #f5f7fb;
+      --dark-text: #101a33;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 20px 60px rgba(5, 18, 50, .12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--dark-text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 21, 47, .88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      color: #dbe5fa;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-btn {
+      padding: 12px 21px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--gold), #ff9e32);
+      color: #17120a !important;
+      font-weight: 700;
+    }
+
+    .menu {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 760px;
+      padding-top: 150px;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        radial-gradient(circle at 80% 30%, rgba(117,71,255,.35), transparent 28%),
+        radial-gradient(circle at 60% 80%, rgba(36,107,254,.25), transparent 30%),
+        linear-gradient(135deg, #06132c, #0b1d43 60%, #101b3d);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      right: -220px;
+      top: 100px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow:
+        0 0 0 70px rgba(255,255,255,.015),
+        0 0 0 140px rgba(255,255,255,.012);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.06);
+      border-radius: 30px;
+      font-size: 12px;
+      color: #dbe5fa;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: #4ce58d;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #4ce58d;
+    }
+
+    h1 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(44px, 5vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      max-width: 700px;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, #ffdb7a, #ffae35);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      color: #afbdd6;
+      font-size: 18px;
+      max-width: 570px;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #ff9f31);
+      color: #161109;
+      box-shadow: 0 10px 35px rgba(255, 183, 67, .22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.2);
+      color: white;
+      background: rgba(255,255,255,.05);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.1);
+    }
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+      position: relative;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .glow {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(117,71,255,.35), transparent 68%);
+      filter: blur(10px);
+    }
+
+    .dashboard {
+      width: 440px;
+      min-height: 330px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 25px;
+      padding: 25px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 30px 80px rgba(0,0,0,.3);
+      transform: perspective(1000px) rotateY(-7deg) rotateX(4deg);
+      position: relative;
+      z-index: 3;
+    }
+
+    .dash-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .dash-title {
+      font-weight: 700;
+      color: white;
+    }
+
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffbd4a, #7547ff);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    .points-card {
+      padding: 22px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(36,107,254,.9), rgba(117,71,255,.9));
+      margin-bottom: 18px;
+    }
+
+    .points-label {
+      font-size: 12px;
+      opacity: .75;
+    }
+
+    .points {
+      font-size: 36px;
+      font-weight: 800;
+      margin: 5px 0;
+    }
+
+    .progress {
+      height: 7px;
+      background: rgba(255,255,255,.2);
+      border-radius: 10px;
+      margin-top: 14px;
+      overflow: hidden;
+    }
+
+    .progress div {
+      width: 72%;
+      height: 100%;
+      background: var(--gold);
+      border-radius: inherit;
+    }
+
+    .dash-row {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+    }
+
+    .mini-card {
+      padding: 16px 10px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.07);
+      text-align: center;
+    }
+
+    .mini-card strong {
+      display: block;
+      font-size: 18px;
+      color: white;
+    }
+
+    .mini-card small {
+      color: #9eacc7;
+      font-size: 10px;
+    }
+
+    .floating {
+      position: absolute;
+      padding: 13px 17px;
+      background: rgba(255,255,255,.96);
+      color: var(--dark-text);
+      border-radius: 13px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.2);
+      z-index: 5;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .float-one {
+      top: 55px;
+      right: -5px;
+    }
+
+    .float-two {
+      bottom: 60px;
+      left: -20px;
+    }
+
+    /* ================= TRUST ================= */
+
+    .trust {
+      padding: 30px 0;
+      background: #fff;
+      border-bottom: 1px solid #edf0f5;
+    }
+
+    .trust-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      color: #8590a5;
+      font-size: 13px;
+    }
+
+    .trust-logos {
+      display: flex;
+      gap: 35px;
+      flex-wrap: wrap;
+      font-weight: 700;
+      color: #a1aabc;
+    }
+
+    /* ================= SECTION ================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 55px;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 15px;
+    }
+
+    .section-head p {
+      color: #69758b;
+    }
+
+    /* ================= FEATURES ================= */
+
+    .features {
+      background: #f7f9fc;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .feature {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #e9edf4;
+      transition: .3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #e8f0ff, #eee8ff);
+      font-size: 25px;
+      margin-bottom: 22px;
+    }
+
+    .feature h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #718096;
+      font-size: 14px;
+    }
+
+    /* ================= SOLUTIONS ================= */
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .solution {
+      min-height: 290px;
+      padding: 35px;
+      border-radius: 24px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .solution:nth-child(1) {
+      background: linear-gradient(135deg, #0b2250, #183f87);
+    }
+
+    .solution:nth-child(2) {
+      background: linear-gradient(135deg, #45218c, #7547ff);
+    }
+
+    .solution:nth-child(3) {
+      background: linear-gradient(135deg, #123f51, #087e88);
+    }
+
+    .solution:nth-child(4) {
+      background: linear-gradient(135deg, #7a4010, #db8c1f);
+    }
+
+    .solution::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      right: -70px;
+      bottom: -100px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .solution h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .solution p {
+      color: rgba(255,255,255,.75);
+      max-width: 430px;
+    }
+
+    .solution-icon {
+      font-size: 35px;
+      margin-bottom: 35px;
+    }
+
+    /* ================= STATS ================= */
+
+    .stats {
+      background: var(--navy);
+      color: white;
+      padding: 75px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      text-align: center;
+    }
+
+    .stat {
+      padding: 15px;
+      border-right: 1px solid rgba(255,255,255,.1);
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 38px;
+      font-family: "Plus Jakarta Sans";
+    }
+
+    .stat span {
+      color: #99a9c7;
+      font-size: 13px;
+    }
+
+    /* ================= HOW IT WORKS ================= */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: #748096;
+      font-size: 14px;
+    }
+
+    /* ================= CTA ================= */
+
+    .cta {
+      padding: 0 0 100px;
+    }
+
+    .cta-box {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(117,71,255,.4), transparent 30%),
+        linear-gradient(135deg, #07152f, #142d5d);
+      border-radius: 30px;
+      padding: 70px;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta-box h2 {
+      max-width: 700px;
+      margin: auto auto 18px;
+    }
+
+    .cta-box p {
+      color: #aebbd2;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #050e20;
+      color: white;
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 45px;
+    }
+
+    .footer-brand p {
+      color: #8290aa;
+      max-width: 330px;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    footer h4 {
+      margin-bottom: 18px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 10px;
+      color: #8290aa;
+      font-size: 14px;
+    }
+
+    footer li:hover {
+      color: var(--gold);
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 20px;
+      color: #68758d;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .hero-grid,
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero-visual {
+        min-height: 420px;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+      }
+
+      .stat {
+        border-right: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 600px) {
+
+      section {
+        padding: 70px 0;
+      }
+
+      h1 {
+        font-size: 44px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .dashboard {
+        width: 100%;
+        transform: none;
+      }
+
+      .floating {
+        display: none;
+      }
+
+      .feature-grid,
+      .steps,
+      .stats-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cta-box {
+        padding: 45px 25px;
+      }
+
+      .copyright {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Rewards<span>Zapp</span></a>
+
+        <div class="nav-links">
+          <a href="#solutions">Solutions</a>
+          <a href="#features">Features</a>
+          <a href="#how">How It Works</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="nav-btn">Get Started</a>
+        </div>
+
+        <div class="menu" onclick="toggleMenu()">☰</div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero" id="about">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          Smart Rewards. Stronger Engagement.
+        </div>
+
+        <h1>
+          Reward People.
+          <span>Build Loyalty.</span>
+          Grow Faster.
+        </h1>
+
+        <p class="hero-text">
+          RewardsZapp helps businesses create powerful rewards,
+          loyalty, gifting and incentive experiences that keep
+          employees, customers and partners engaged.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            Start Your Rewards Program →
+          </a>
+
+          <a href="#solutions" class="btn btn-outline">
+            Explore Solutions
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="glow"></div>
+
+        <div class="dashboard">
+
+          <div class="dash-top">
+            <div class="dash-title">Rewards Dashboard</div>
+            <div class="avatar">R</div>
+          </div>
+
+          <div class="points-card">
+
+            <div class="points-label">
+              AVAILABLE REWARD POINTS
+            </div>
+
+            <div class="points">
+              24,850
+            </div>
+
+            <div class="progress">
+              <div></div>
+            </div>
+
+          </div>
+
+          <div class="dash-row">
+
+            <div class="mini-card">
+              <strong>₹12.4K</strong>
+              <small>Rewards</small>
+            </div>
+
+            <div class="mini-card">
+              <strong>184</strong>
+              <small>Redeemed</small>
+            </div>
+
+            <div class="mini-card">
+              <strong>92%</strong>
+              <small>Engagement</small>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="floating float-one">
+          🎁 Reward Redeemed
+        </div>
+
+        <div class="floating float-two">
+          ⭐ +500 Points Earned
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= TRUST ================= -->
+
+  <div class="trust">
+
+    <div class="container trust-content">
+
+      <span>Built for modern businesses</span>
+
+      <div class="trust-logos">
+        <span>ENTERPRISE</span>
+        <span>STARTUPS</span>
+        <span>RETAIL</span>
+        <span>PHARMA</span>
+        <span>FINANCE</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= FEATURES ================= -->
+
+  <section class="features" id="features">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          One Platform
+        </div>
+
+        <h2>
+          Everything you need to reward better
+        </h2>
+
+        <p>
+          From employee recognition to customer loyalty,
+          RewardsZapp brings your entire rewards ecosystem
+          together in one powerful platform.
+        </p>
+
+      </div>
+
+
+      <div class="feature-grid">
+
+        <div class="feature">
+          <div class="icon">🎁</div>
+          <h3>Digital Gifting</h3>
+          <p>
+            Send digital gift cards, vouchers and rewards
+            instantly through a seamless experience.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">⭐</div>
+          <h3>Loyalty Programs</h3>
+          <p>
+            Build engaging points-based loyalty programs
+            that turn customers into repeat buyers.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">🏆</div>
+          <h3>Employee Rewards</h3>
+          <p>
+            Recognize achievements and create meaningful
+            employee engagement programs.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">📊</div>
+          <h3>Analytics & Reports</h3>
+          <p>
+            Track rewards, redemptions, engagement and
+            program performance in real time.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">💳</div>
+          <h3>Gift Cards & Vouchers</h3>
+          <p>
+            Give recipients the freedom to choose from
+            a wide range of reward options.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">⚡</div>
+          <h3>Instant Delivery</h3>
+          <p>
+            Deliver rewards through digital links, email,
+            SMS and other convenient channels.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SOLUTIONS ================= -->
+
+  <section id="solutions">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          Solutions
+        </div>
+
+        <h2>
+          Rewards designed for every relationship
+        </h2>
+
+        <p>
+          Create personalized reward journeys for employees,
+          customers, channel partners and sales teams.
+        </p>
+
+      </div>
+
+
+      <div class="solutions-grid">
+
+        <div class="solution">
+
+          <div class="solution-icon">👨‍💼</div>
+
+          <h3>Employee Engagement</h3>
+
+          <p>
+            Celebrate milestones, birthdays, achievements,
+            recognition and performance with meaningful rewards.
+          </p>
+
+        </div>
+
+
+        <div class="solution">
+
+          <div class="solution-icon">❤️</div>
+
+          <h3>Customer Loyalty</h3>
+
+          <p>
+            Increase retention and repeat purchases with
+            personalized loyalty and rewards programs.
+          </p>
+
+        </div>
+
+
+        <div class="solution">
+
+          <div class="solution-icon">🤝</div>
+
+          <h3>Channel Incentives</h3>
+
+          <p>
+            Motivate dealers, distributors and channel
+            partners with performance-driven incentives.
+          </p>
+
+        </div>
+
+
+        <div class="solution">
+
+          <div class="solution-icon">🚀</div>
+
+          <h3>Sales Incentives</h3>
+
+          <p>
+            Accelerate sales performance with transparent,
+            measurable and exciting incentive programs.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= STATS ================= -->
+
+  <section class="stats">
+
+    <div class="container stats-grid">
+
+      <div class="stat">
+        <strong>10K+</strong>
+        <span>Rewards Delivered</span>
+      </div>
+
+      <div class="stat">
+        <strong>500+</strong>
+        <span>Reward Options</span>
+      </div>
+
+      <div class="stat">
+        <strong>95%</strong>
+        <span>Customer Satisfaction</span>
+      </div>
+
+      <div class="stat">
+        <strong>24/7</strong>
+        <span>Digital Delivery</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= HOW IT WORKS ================= -->
+
+  <section id="how">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          How It Works
+        </div>
+
+        <h2>
+          Simple. Smart. Rewarding.
+        </h2>
+
+        <p>
+          Launch your rewards program in three simple steps.
+        </p>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">01</div>
+
+          <h3>Create Your Program</h3>
+
+          <p>
+            Define your audience, rewards, points and
+            engagement goals.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">02</div>
+
+          <h3>Engage & Reward</h3>
+
+          <p>
+            Distribute points, vouchers and incentives
+            through your preferred channels.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">03</div>
+
+          <h3>Track & Grow</h3>
+
+          <p>
+            Monitor redemption, engagement and program
+            performance through powerful analytics.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CTA ================= -->
+
+  <section class="cta" id="contact">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>
+          Ready to create a rewards experience people love?
+        </h2>
+
+        <p>
+          Let's build a smarter rewards and loyalty program
+          for your employees, customers and partners.
+        </p>
+
+        <a href="mailto:hello@rewardszapp.com"
+           class="btn btn-primary">
+          Talk to RewardsZapp →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <div class="logo">
+            Rewards<span>Zapp</span>
+          </div>
+
+          <p>
+            Smart rewards, gifting and loyalty solutions
+            designed to help businesses engage people
+            and build lasting relationships.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Solutions</h4>
+
+          <ul>
+            <li><a href="#solutions">Employee Rewards</a></li>
+            <li><a href="#solutions">Customer Loyalty</a></li>
+            <li><a href="#solutions">Sales Incentives</a></li>
+            <li><a href="#solutions">Channel Programs</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Platform</h4>
+
+          <ul>
+            <li><a href="#features">Digital Gifting</a></li>
+            <li><a href="#features">Gift Cards</a></li>
+            <li><a href="#features">Analytics</a></li>
+            <li><a href="#features">Reward Management</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Company</h4>
+
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        <span>
+          © 2026 RewardsZapp. All rights reserved.
+        </span>
+
+        <span>
+          Rewards • Loyalty • Engagement
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    function toggleMenu() {
+
+      const links = document.querySelector(".nav-links");
+
+      if (links.style.display === "flex") {
+        links.style.display = "none";
+      } else {
+        links.style.display = "flex";
+        links.style.flexDirection = "column";
+        links.style.position = "absolute";
+        links.style.top = "78px";
+        links.style.left = "0";
+        links.style.width = "100%";
+        links.style.padding = "25px";
+        links.style.background = "#07152f";
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>

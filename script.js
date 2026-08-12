@@ -1,1 +1,15 @@
-document.querySelector(".hamburger").addEventListener("click",()=>{const n=document.querySelector(".nav nav");n.style.display=n.style.display==="flex"?"":"flex";n.style.position="absolute";n.style.top="78px";n.style.left="0";n.style.right="0";n.style.background="#fff";n.style.padding="20px 6%";n.style.flexDirection="column";n.style.boxShadow="0 15px 30px #0001"});document.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>document.querySelector(".nav nav").style.display=""));document.getElementById("contactForm").addEventListener("submit",e=>{e.preventDefault();document.getElementById("msg").textContent="Thank you! Your enquiry has been received. Connect this form to your email/CRM before launch.";e.target.reset()});
+function submitForm(e){
+  e.preventDefault();
+  const form=e.target, status=document.getElementById("form-status");
+  const data=new FormData(form);
+  const subject=encodeURIComponent("RewardsZapp Website Enquiry - "+(data.get("company")||data.get("name")));
+  const body=encodeURIComponent(
+    "Name: "+data.get("name")+"\n"+
+    "Email: "+data.get("email")+"\n"+
+    "Company: "+data.get("company")+"\n"+
+    "Requirement: "+data.get("requirement")+"\n\n"+
+    data.get("message")
+  );
+  window.location.href="mailto:info@rewardszapp.com?subject="+subject+"&body="+body;
+  status.textContent="Opening your email app to send the enquiry…";
+}

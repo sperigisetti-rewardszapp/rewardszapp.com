@@ -1,122 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RewardsZapp - Corporate rewards, digital gifting, employee engagement and incentive solutions.">
-  <title>RewardsZapp | Rewards. Gifting. Engagement.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RewardsZapp — modern rewards, loyalty, gifting and engagement solutions for businesses." />
+  <title>RewardsZapp | Reward. Engage. Grow.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="nav">
-  <a class="brand" href="#home"><span class="brand-mark">R</span><span>Rewards<span>Zapp</span></span></a>
-  <nav>
-    <a href="#solutions">Solutions</a>
-    <a href="#how">How It Works</a>
-    <a href="#brands">Brands</a>
-    <a href="#about">About</a>
-    <a href="#contact" class="nav-cta">Talk to Us</a>
-  </nav>
-  <button class="menu" aria-label="Open menu">☰</button>
-</header>
+  <div class="progress"></div>
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="logo" href="#top" aria-label="RewardsZapp home">
+        <span class="logo-mark">R</span><span>Rewards<span class="logo-accent">Zapp</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="#solutions">Solutions</a>
+        <a href="#rewards">Rewards</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#platform">Platform</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Get Started <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
 
-<main>
-<section id="home" class="hero">
-  <div class="hero-copy">
-    <div class="eyebrow">SMART REWARDS • SIMPLE EXPERIENCES</div>
-    <h1>Reward people.<br><span>Build loyalty.</span><br>Grow faster.</h1>
-    <p>RewardsZapp helps businesses create memorable reward, gifting and engagement programs for employees, customers, dealers and partners.</p>
-    <div class="hero-actions">
-      <a class="btn primary" href="#contact">Start a Program →</a>
-      <a class="btn secondary" href="#solutions">Explore Solutions</a>
+  <main>
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="pulse"></span> Next-generation rewards platform</div>
+          <h1>Reward.<br><span>Engage.</span> Grow.</h1>
+          <p class="hero-text">Build memorable loyalty, gifting and engagement experiences that make every interaction count.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Launch Your Program <span>↗</span></a>
+            <a href="#platform" class="btn btn-ghost"><span class="play">▶</span> Explore Platform</a>
+          </div>
+          <div class="trust-row">
+            <span>Built for ambitious brands</span>
+            <div class="mini-logos"><b>T</b><b>H</b><b>R</b><b>N</b><b>+</b></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="dashboard-card">
+            <div class="dash-top"><span>RewardsZapp</span><span class="live"><i></i> LIVE</span></div>
+            <div class="dash-title">Engagement Overview <small>Last 30 days ▾</small></div>
+            <div class="metric-row">
+              <div><span>Active Members</span><strong>24,892</strong><em>+18.6%</em></div>
+              <div><span>Rewards Redeemed</span><strong>₹18.4L</strong><em>+24.2%</em></div>
+            </div>
+            <div class="chart">
+              <div class="chart-labels"><span>Jun 1</span><span>Jun 8</span><span>Jun 15</span><span>Jun 22</span><span>Jun 30</span></div>
+              <svg viewBox="0 0 560 170" preserveAspectRatio="none" aria-label="Engagement trend chart">
+                <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-opacity=".35"/><stop offset="1" stop-opacity="0"/></linearGradient></defs>
+                <path class="area" d="M0 145 C45 125 58 135 95 108 S145 120 185 90 S230 110 270 70 S315 88 350 62 S400 70 435 42 S485 55 520 24 S545 35 560 12 V170 H0Z"/>
+                <path class="line" d="M0 145 C45 125 58 135 95 108 S145 120 185 90 S230 110 270 70 S315 88 350 62 S400 70 435 42 S485 55 520 24 S545 35 560 12"/>
+              </svg>
+              <div class="chart-grid"></div>
+            </div>
+            <div class="dash-bottom">
+              <div class="reward-bubble"><span>🎁</span><div><small>Latest reward</small><b>₹1,000 Amazon Voucher</b></div><strong>+1,000</strong></div>
+            </div>
+          </div>
+          <div class="float-card points"><span>✦</span><div><small>Points earned</small><b>+2,450</b></div></div>
+          <div class="float-card gift"><span>🎁</span><div><small>Reward unlocked</small><b>Weekend Escape</b></div></div>
+        </div>
+      </div>
+      <div class="scroll-hint">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section class="marquee-section">
+      <div class="marquee"><span>LOYALTY</span><i>✦</i><span>REWARDS</span><i>✦</i><span>GIFTING</span><i>✦</i><span>ENGAGEMENT</span><i>✦</i><span>LOYALTY</span><i>✦</i><span>REWARDS</span><i>✦</i></div>
+    </section>
+
+    <section class="section" id="solutions">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-kicker">01 — SOLUTIONS</span><h2>One platform.<br><span>Endless possibilities.</span></h2></div>
+          <p>From employee recognition to customer loyalty, RewardsZapp gives you the tools to create rewarding experiences at scale.</p>
+        </div>
+        <div class="solution-grid">
+          <article class="solution-card large reveal"><div class="card-icon">◎</div><span class="card-no">01</span><h3>Customer Loyalty</h3><p>Turn purchases and interactions into meaningful rewards that keep customers coming back.</p><a href="#contact">Explore solution <span>↗</span></a><div class="card-glow"></div></article>
+          <article class="solution-card reveal delay-1"><div class="card-icon">✦</div><span class="card-no">02</span><h3>Employee Rewards</h3><p>Recognize wins, milestones and everyday excellence with flexible digital rewards.</p><a href="#contact">Explore solution <span>↗</span></a></article>
+          <article class="solution-card reveal delay-2"><div class="card-icon">◇</div><span class="card-no">03</span><h3>Corporate Gifting</h3><p>Premium gifting experiences for clients, partners, employees and channel networks.</p><a href="#contact">Explore solution <span>↗</span></a></article>
+          <article class="solution-card wide reveal"><div class="card-icon">↗</div><span class="card-no">04</span><h3>Sales Incentives & Campaigns</h3><p>Motivate your sales ecosystem with measurable, campaign-ready incentive programs.</p><a href="#contact">Explore solution <span>↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="rewards">
+      <div class="container">
+        <div class="section-head light reveal">
+          <div><span class="section-kicker">02 — REWARD CATALOG</span><h2>Give them a reason<br>to <span>smile.</span></h2></div>
+          <p>Digital vouchers, experiences, merchandise and curated rewards — all managed from one intelligent platform.</p>
+        </div>
+        <div class="reward-showcase reveal">
+          <div class="reward-card rc-blue"><div class="reward-brand">AMAZON</div><div class="reward-value">₹1,000</div><div class="reward-label">Digital Gift Card</div><div class="reward-chip">E-GIFT</div></div>
+          <div class="reward-card rc-purple"><div class="reward-brand">TRAVEL</div><div class="reward-value">₹5,000</div><div class="reward-label">Travel Experience</div><div class="reward-chip">EXPERIENCE</div></div>
+          <div class="reward-card rc-gold"><div class="reward-brand">LIFESTYLE</div><div class="reward-value">₹2,500</div><div class="reward-label">Curated Gift</div><div class="reward-chip">PREMIUM</div></div>
+          <div class="reward-card rc-green"><div class="reward-brand">FOOD</div><div class="reward-value">₹750</div><div class="reward-label">Food & Dining</div><div class="reward-chip">VOUCHER</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="center-head reveal"><span class="section-kicker">03 — HOW IT WORKS</span><h2>Simple for you.<br><span>Exciting for them.</span></h2></div>
+        <div class="steps">
+          <div class="step reveal"><div class="step-number">01</div><h3>Design</h3><p>Define your audience, objectives, rewards and campaign rules.</p></div>
+          <div class="step-line"></div>
+          <div class="step reveal delay-1"><div class="step-number">02</div><h3>Launch</h3><p>Go live with digital journeys built around your brand experience.</p></div>
+          <div class="step-line"></div>
+          <div class="step reveal delay-2"><div class="step-number">03</div><h3>Engage</h3><p>Drive participation with smart triggers, communication and incentives.</p></div>
+          <div class="step-line"></div>
+          <div class="step reveal delay-3"><div class="step-number">04</div><h3>Measure</h3><p>Track performance, redemption and engagement through live analytics.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section platform-section" id="platform">
+      <div class="container platform-wrap">
+        <div class="platform-copy reveal">
+          <span class="section-kicker">04 — THE PLATFORM</span>
+          <h2>Your rewards engine,<br><span>supercharged.</span></h2>
+          <p>Powerful controls behind a beautifully simple experience. Manage campaigns, users, wallets, rewards and analytics from a single command center.</p>
+          <ul class="feature-list">
+            <li><span>✓</span> Real-time campaign analytics</li>
+            <li><span>✓</span> Wallet & points management</li>
+            <li><span>✓</span> Automated reward fulfilment</li>
+            <li><span>✓</span> API-ready integrations</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">Book a Demo <span>↗</span></a>
+        </div>
+        <div class="admin-ui reveal delay-1">
+          <div class="admin-top"><span class="admin-logo">RZ</span><span>Campaign Manager</span><span class="admin-dots">•••</span></div>
+          <div class="admin-body">
+            <aside><b>Overview</b><span>Campaigns</span><span>Rewards</span><span>Members</span><span>Analytics</span><span>Settings</span></aside>
+            <div class="admin-main">
+              <div class="admin-welcome"><span><small>Good evening, Admin</small><b>Campaign performance</b></span><button>+ New Campaign</button></div>
+              <div class="admin-stats"><div><small>Total Participants</small><b>24,892</b><em>+18.6%</em></div><div><small>Rewards Issued</small><b>58,420</b><em>+31.4%</em></div><div><small>Redemption Rate</small><b>76.8%</b><em>+9.2%</em></div></div>
+              <div class="admin-chart"><div class="bars"><i style="height:38%"></i><i style="height:55%"></i><i style="height:44%"></i><i style="height:68%"></i><i style="height:62%"></i><i style="height:81%"></i><i style="height:92%"></i></div><div class="bar-labels"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section" id="about">
+      <div class="container stats-grid">
+        <div class="stat reveal"><strong data-count="98">0</strong><span>%</span><p>Client satisfaction</p></div>
+        <div class="stat reveal delay-1"><strong data-count="500">0</strong><span>+</span><p>Reward options</p></div>
+        <div class="stat reveal delay-2"><strong data-count="50">0</strong><span>+</span><p>Brands & partners</p></div>
+        <div class="stat reveal delay-3"><strong data-count="10">0</strong><span>L+</span><p>Rewards delivered</p></div>
+      </div>
+    </section>
+
+    <section class="section testimonial-section">
+      <div class="container">
+        <div class="quote-mark">“</div>
+        <blockquote class="reveal">The best rewards are the ones that feel personal. RewardsZapp helps brands make that happen — at scale.</blockquote>
+        <div class="quote-author reveal"><span class="avatar">S</span><div><b>RewardsZapp Team</b><small>Reward & Engagement Solutions</small></div></div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="cta-orb"></div>
+      <div class="container cta-inner reveal">
+        <span class="section-kicker">05 — LET'S TALK</span>
+        <h2>Ready to make<br>every moment <span>rewarding?</span></h2>
+        <p>Tell us what you want to achieve. We'll help you design a rewards experience your audience won't forget.</p>
+        <div class="hero-actions"><a href="mailto:hello@rewardszapp.com" class="btn btn-light">hello@rewardszapp.com <span>↗</span></a><a href="tel:+919000000000" class="btn btn-outline-light">Talk to us</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-top">
+      <div><a class="logo" href="#top"><span class="logo-mark">R</span><span>Rewards<span class="logo-accent">Zapp</span></span></a><p>Reward. Engage. Grow.</p></div>
+      <div class="footer-links"><div><b>Explore</b><a href="#solutions">Solutions</a><a href="#rewards">Rewards</a><a href="#platform">Platform</a></div><div><b>Company</b><a href="#about">About</a><a href="#contact">Contact</a><a href="#top">Privacy</a></div><div><b>Connect</b><a href="mailto:hello@rewardszapp.com">Email</a><a href="#contact">LinkedIn</a><a href="#contact">Instagram</a></div></div>
     </div>
-    <div class="trust"><span>✓</span> Corporate-ready &nbsp; <span>✓</span> Digital-first &nbsp; <span>✓</span> Scalable campaigns</div>
-  </div>
-  <div class="hero-card">
-    <div class="orb orb1"></div><div class="orb orb2"></div>
-    <div class="reward-card">
-      <div class="mini-logo">RZ</div>
-      <div class="card-title">REWARD<br>UNLOCKED</div>
-      <div class="card-value">₹ 2,500</div>
-      <div class="card-foot">RewardsZapp Digital Gift</div>
-    </div>
-    <div class="float-card one"><b>98%</b><small>campaign visibility</small></div>
-    <div class="float-card two"><b>24×7</b><small>digital delivery</small></div>
-  </div>
-</section>
+    <div class="container footer-bottom"><span>© 2026 RewardsZapp. All rights reserved.</span><span>Built for better engagement.</span></div>
+  </footer>
 
-<section class="stats">
-  <div><strong>01</strong><span>One platform for rewards</span></div>
-  <div><strong>02</strong><span>Flexible denominations</span></div>
-  <div><strong>03</strong><span>Fast digital fulfilment</span></div>
-  <div><strong>04</strong><span>Actionable reporting</span></div>
-</section>
-
-<section id="solutions" class="section">
-  <div class="section-head">
-    <div><div class="eyebrow">WHAT WE DO</div><h2>Rewards that work<br><span>for your business.</span></h2></div>
-    <p>From employee recognition to consumer promotions, create reward journeys that are easy to launch, manage and measure.</p>
-  </div>
-  <div class="grid">
-    <article class="solution"><div class="icon">✦</div><h3>Employee Rewards</h3><p>Recognize achievements, birthdays, milestones and exceptional performance.</p><a href="#contact">Build a program →</a></article>
-    <article class="solution"><div class="icon">◎</div><h3>Corporate Gifting</h3><p>Flexible digital gifting for clients, employees, partners and special occasions.</p><a href="#contact">Explore gifting →</a></article>
-    <article class="solution"><div class="icon">↗</div><h3>Sales Incentives</h3><p>Motivate sales teams and channel partners with measurable incentive campaigns.</p><a href="#contact">Boost performance →</a></article>
-    <article class="solution"><div class="icon">♡</div><h3>Loyalty & Engagement</h3><p>Turn customer actions into meaningful rewards and long-term relationships.</p><a href="#contact">Create loyalty →</a></article>
-    <article class="solution"><div class="icon">◇</div><h3>Consumer Promotions</h3><p>Run scalable promotional campaigns with digital rewards and easy fulfilment.</p><a href="#contact">Launch a campaign →</a></article>
-    <article class="solution"><div class="icon">◈</div><h3>Dealer & Distributor</h3><p>Incentivize your distribution network and strengthen partner engagement.</p><a href="#contact">Reward partners →</a></article>
-  </div>
-</section>
-
-<section id="how" class="section dark">
-  <div class="section-head">
-    <div><div class="eyebrow">HOW IT WORKS</div><h2>Simple from brief<br><span>to reward.</span></h2></div>
-    <p>Designed to keep your campaign teams focused on outcomes—not operational complexity.</p>
-  </div>
-  <div class="steps">
-    <div><b>01</b><h3>Share your requirement</h3><p>Tell us your audience, budget, reward preference and campaign goals.</p></div>
-    <div><b>02</b><h3>We build the program</h3><p>We configure denominations, rewards, fulfilment and reporting around your needs.</p></div>
-    <div><b>03</b><h3>Launch & distribute</h3><p>Deliver digital rewards through the channel that works for your campaign.</p></div>
-    <div><b>04</b><h3>Track & optimize</h3><p>Monitor utilization and campaign performance with clear reporting.</p></div>
-  </div>
-</section>
-
-<section id="brands" class="section brands">
-  <div class="section-head center"><div><div class="eyebrow">REWARD CATEGORIES</div><h2>Give people <span>choice.</span></h2></div></div>
-  <div class="brand-pills">
-    <span>Shopping</span><span>Food & Dining</span><span>Travel</span><span>Entertainment</span><span>Fashion</span><span>Electronics</span><span>Wellness</span><span>Lifestyle</span>
-  </div>
-  <div class="callout"><div><div class="eyebrow">YOUR CAMPAIGN. YOUR RULES.</div><h3>From ₹200 gifts to large-scale corporate programs.</h3><p>Choose denominations and reward formats that match your audience and budget.</p></div><a class="btn primary" href="#contact">Get a Proposal →</a></div>
-</section>
-
-<section id="about" class="section about">
-  <div class="about-box">
-    <div><div class="eyebrow">ABOUT REWARDSZAPP</div><h2>Making rewards<br><span>more rewarding.</span></h2></div>
-    <div><p>RewardsZapp is built to make corporate rewards and gifting faster, simpler and more engaging. We combine digital fulfilment, flexible reward options and campaign support to help organizations create better experiences.</p><p>Whether you are rewarding one employee or running a large consumer promotion, our goal is the same: make every reward count.</p></div>
-  </div>
-</section>
-
-<section id="contact" class="section contact">
-  <div class="contact-copy"><div class="eyebrow">LET'S CONNECT</div><h2>Have a reward<br><span>in mind?</span></h2><p>Tell us what you are planning. Our team can help you design the right reward and gifting solution.</p><div class="contact-points"><div>✉ <span>info@rewardszapp.com</span></div><div>☎ <span>+91-7207731161</span></div><div>⌖ <span>Villa No 147, Signator Villas,SMNR Garden's Rd, Bachupally,Hyderabad-500080,India</span></div></div></div>
-  <form class="form" onsubmit="submitForm(event)">
-    <input required name="name" placeholder="Your name">
-    <input required type="email" name="email" placeholder="Business email">
-    <input name="company" placeholder="Company name">
-    <select name="requirement"><option value="">What do you need?</option><option>Corporate Gifting</option><option>Employee Rewards</option><option>Sales Incentives</option><option>Consumer Promotion</option><option>Loyalty Program</option><option>Dealer / Distributor Incentives</option></select>
-    <textarea required name="message" rows="5" placeholder="Tell us about your requirement"></textarea>
-    <button class="btn primary" type="submit">Send Enquiry →</button>
-    <small id="form-status"></small>
-  </form>
-</section>
-</main>
-
-<footer>
-  <div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark">R</span><span>Rewards<span>Zapp</span></span></a><p>Rewards. Gifting. Engagement.</p></div>
-  <div><a href="#solutions">Solutions</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-  <div><span>© 2026 RewardsZapp. All rights reserved.</span></div>
-</footer>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,13 +1,20 @@
-# RewardsZapp Website
+# RewardsZapp Full Website
 
-## Files
-- index.html — main website
-- css/style.css — complete styling and responsive design
-- js/script.js — animations and mobile navigation
-- assets/ — folder for future images, logos and icons
+Pages included:
+- index.html
+- about.html
+- solutions.html
+- platform.html
+- customer-loyalty.html
+- employee-rewards.html
+- sales-incentives.html
+- contact.html
+- login.html
+- dashboard.html
 
-## Run locally
-Open `index.html` in a browser.
+Shared assets:
+- css/style.css
+- js/script.js
+- assets/
 
-## Hosting
-Upload the entire `RewardsZapp-Website` folder to your hosting, keeping the folder structure unchanged.
+This is a front-end website. Forms and login are demo interactions and should be connected to a backend/CRM/authentication service for production use.

@@ -1,22 +1,25 @@
-const menuToggle=document.querySelector('.menu-toggle');
-const navLinks=document.querySelector('#navLinks');
-menuToggle?.addEventListener('click',()=>navLinks.classList.toggle('open'));
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
-document.getElementById('year').textContent=new Date().getFullYear();
+// Scroll reveal
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting) entry.target.classList.add('show');
+      });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-// Gentle dashboard number animation
-document.querySelectorAll('.stats b').forEach(el=>{
-  const original=el.textContent;
-  if(!/[0-9]/.test(original)) return;
-  const match=original.match(/[\d.]+/);
-  if(!match) return;
-  const target=parseFloat(match[0]);
-  let current=0, frames=50;
-  const suffix=original.replace(match[0],'');
-  const step=target/frames;
-  const timer=setInterval(()=>{
-    current=Math.min(target,current+step);
-    el.textContent=(target>=1000?current.toFixed(target%1?1:0):current.toFixed(target%1?1:0))+suffix;
-    if(current>=target) clearInterval(timer);
-  },18);
-});
+    // Simple mobile navigation
+    const menu = document.querySelector('.menu');
+    const links = document.querySelector('.links');
+    menu.addEventListener('click',()=>{
+      const open = links.style.display === 'flex';
+      links.style.display = open ? '' : 'flex';
+      if(!open){
+        links.style.position='absolute';
+        links.style.top='84px';
+        links.style.left='0';
+        links.style.right='0';
+        links.style.padding='20px';
+        links.style.flexDirection='column';
+        links.style.background='#100b2e';
+        links.style.borderBottom='1px solid rgba(255,255,255,.12)';
+      }
+    });
